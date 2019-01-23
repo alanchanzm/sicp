@@ -1,6 +1,9 @@
-function square(x) {
-  return x ** 2;
+function pow(n) {
+  return x => x ** n;
 }
+
+const square = pow(2);
+const cube = pow(3);
 
 const { abs } = Math;
 
@@ -12,4 +15,5 @@ module.exports = {
   square,
   abs,
   average,
+  cube,
 };

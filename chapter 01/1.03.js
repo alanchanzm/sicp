@@ -55,9 +55,10 @@ function test() {
   [(case_1, case_2, case_3, case_4)].forEach(({ nums, ans }) => {
     const result = sum_of_larger_squares(...nums);
     if (result !== ans) {
-      console.error(
+      throw new Error(
         `sum_of_larger_squares(${nums}) should be ${ans}, not ${result}`
       );
     }
   });
+  console.log('tests pass');
 }
