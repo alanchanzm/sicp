@@ -51,6 +51,7 @@ function test() {
     nums: [0, 0, 0],
     ans: 0,
   };
+
   [(case_1, case_2, case_3, case_4)].forEach(({ nums, ans }) => {
     const result = sum_of_larger_squares(...nums);
     if (result !== ans) {
@@ -59,5 +60,4 @@ function test() {
       );
     }
   });
-  console.log('tests pass');
 }

@@ -6,5 +6,6 @@ module.exports = {
     camelcase: 'off',
     quotes: ['error', 'single', { allowTemplateLiterals: true }],
     'no-console': 'off',
+    'arrow-parens': ['error', 'as-needed'],
   },
 };
