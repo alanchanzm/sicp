@@ -11,16 +11,22 @@ function multiplication(a, b) {
   return a + multiplication(a, b - 1);
 }
 
-function test() {
+function test(fn) {
   [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100].forEach((ans, n) => {
-    if (multiplication(n, n) !== ans) {
+    if (fn(n, n) !== ans) {
       throw new Error(
-        `multiplication(${n}, ${n}) should be ${ans}, 
-        not ${multiplication(n, n)}`
+        `${fn.name}(${n}, ${n}) should be ${ans}, 
+        not ${fn(n, n)}`
       );
     }
   });
   console.log('tests pass');
 }
 
-test();
+test(multiplication);
+
+module.exports = {
+  double,
+  halve,
+  test,
+};
