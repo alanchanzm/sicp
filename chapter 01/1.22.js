@@ -34,4 +34,7 @@ function timed_prime_test(n) {
   }
 }
 
+search_for_primes(1001);
+search_for_primes(10001);
 search_for_primes(100001);
+search_for_primes(1000001);
