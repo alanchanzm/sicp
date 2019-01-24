@@ -21,3 +21,5 @@ const ans = {
 };
 
 console.table(ans);
+
+module.exports = { smallest_divisor };
