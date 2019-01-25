@@ -1,0 +1,11 @@
+import fn from '../../src/chapter 01/1.21';
+
+test(`${fn.name} --- 199 --- 199`, () => {
+  expect(fn(199)).toBe(199);
+});
+test(`${fn.name} --- 1999 --- 1999`, () => {
+  expect(fn(1999)).toBe(1999);
+});
+test(`${fn.name} --- 19999 --- 7`, () => {
+  expect(fn(19999)).toBe(7);
+});

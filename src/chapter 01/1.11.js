@@ -20,23 +20,4 @@ function f_iterative(n) {
   }
 }
 
-function test() {
-  // for (value, index) in the array
-  // value is answer
-  // index is n
-  [0, 1, 2, 4, 11, 25, 59, 142, 335, 796, 1892].forEach((ans, n) => {
-    if (f_recursive(n) !== ans) {
-      throw new Error(
-        `f_recursive(${n}) should be ${ans}, not ${f_recursive(n)}`
-      );
-    }
-    if (f_iterative(n) !== ans) {
-      throw new Error(
-        `f_iterative(${n}) should be ${ans}, not ${f_iterative(n)}`
-      );
-    }
-  });
-  console.log('tests pass');
-}
-
-test();
+export { f_recursive, f_iterative };

@@ -1,4 +1,4 @@
-const { is_even, square } = require('../util/index');
+import { is_even, square } from '../../util/index';
 
 function fib(n) {
   return fib_iter();
@@ -22,13 +22,4 @@ function fib(n) {
   }
 }
 
-function test(fn) {
-  [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55].forEach((ans, n) => {
-    if (fn(n, n) !== ans) {
-      throw new Error(`${fn.name}(${n}) should be ${ans}, not ${fn(n)}`);
-    }
-  });
-  console.log('tests pass');
-}
-
-test(fib);
+export default fib;

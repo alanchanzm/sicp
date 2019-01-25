@@ -1,5 +1,9 @@
 module.exports = {
   extends: 'airbnb-base',
+  globals: {
+    test: true,
+    expect: true,
+  },
   rules: {
     'comma-dangle': 'off',
     'no-use-before-define': ['error', { functions: false }],
@@ -7,5 +11,6 @@ module.exports = {
     quotes: ['error', 'single', { allowTemplateLiterals: true }],
     'no-console': 'off',
     'arrow-parens': ['error', 'as-needed'],
+    'no-mixed-operators': 'off',
   },
 };

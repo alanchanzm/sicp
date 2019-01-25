@@ -1,4 +1,4 @@
-const { abs, average, square } = require('../util/index');
+import { abs, average } from '../../util/index';
 
 const THRESHOLD = 0.01;
 
@@ -19,13 +19,4 @@ function sqrt(x, ERROR_THRESHOLD = THRESHOLD) {
   }
 }
 
-function test() {
-  [1000000, 1000, 1, 0.001, 0.000001].forEach(num => {
-    if (square(sqrt(num)) / num - 1 > THRESHOLD) {
-      throw new Error(`sqrt(${num}) is not precise enough`);
-    }
-  });
-  console.log('tests pass');
-}
-
-test();
+export default sqrt;

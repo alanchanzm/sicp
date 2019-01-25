@@ -1,4 +1,4 @@
-const { square } = require('../util/index');
+import { square } from '../../util/index';
 
 function smallest_divisor(n) {
   return find_divisor();
@@ -18,12 +18,4 @@ function smallest_divisor(n) {
   }
 }
 
-const ans = {
-  smallest_divisor_199: smallest_divisor(199),
-  smallest_divisor_1999: smallest_divisor(1999),
-  smallest_divisor_19999: smallest_divisor(19999),
-};
-
-console.table(ans);
-
-module.exports = { smallest_divisor };
+export default smallest_divisor;

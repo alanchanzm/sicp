@@ -1,5 +1,5 @@
-const { is_even } = require('../util/index');
-const { double, halve, test } = require('./1.17');
+import { is_even } from '../../util/index';
+import { double, halve } from './1.17';
 
 function multiplication(a, b) {
   return multiplication_iter();
@@ -13,4 +13,4 @@ function multiplication(a, b) {
   }
 }
 
-test(multiplication);
+export default multiplication;
