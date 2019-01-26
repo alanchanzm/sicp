@@ -10,6 +10,7 @@ const is_odd = n => n % 2 === 1;
 const is_even = n => n % 2 === 0;
 
 const inc = n => n + 1;
+const identity = x => x;
 
 module.exports = {
   square,
@@ -19,4 +20,5 @@ module.exports = {
   is_even,
   is_odd,
   inc,
+  identity,
 };
