@@ -1,4 +1,4 @@
-import fn from '../../src/chapter 01/1.21';
+import fn from '../../src/ch01/1.21';
 
 test(`${fn.name} --- 199 --- 199`, () => {
   expect(fn(199)).toBe(199);

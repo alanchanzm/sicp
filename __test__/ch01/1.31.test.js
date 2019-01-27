@@ -1,8 +1,5 @@
 import { identity, inc, is_odd } from '../../util/index';
-import {
-  product_recursive,
-  product_iterative,
-} from '../../src/chapter 01/1.31';
+import { product_recursive, product_iterative } from '../../src/ch01/1.31';
 
 test(`product_recursive --- identity,1,inc,10 --- 3628800`, () => {
   expect(product_recursive(identity, 1, inc, 10)).toBe(3628800);

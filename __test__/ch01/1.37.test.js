@@ -1,7 +1,4 @@
-import {
-  cont_frac_iterative,
-  cont_frac_recursive,
-} from '../../src/chapter 01/1.37';
+import { cont_frac_iterative, cont_frac_recursive } from '../../src/ch01/1.37';
 
 const n = () => 1;
 const d = () => 1;

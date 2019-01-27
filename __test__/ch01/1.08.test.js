@@ -1,4 +1,4 @@
-import fn from '../../src/chapter 01/1.08';
+import fn from '../../src/ch01/1.08';
 
 [
   1000000,
