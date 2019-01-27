@@ -22,8 +22,8 @@ function cons(x, y) {
   };
 }
 
-const car = () => 0;
-const cdr = () => 1;
+const car = z => z(0);
+const cdr = z => z(1);
 
 module.exports = {
   square,
