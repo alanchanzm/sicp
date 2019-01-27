@@ -1,5 +1,5 @@
-const { abs } = Math;
-const average = (x, y) => (x + y) / 2;
+const { abs, average } = require('../../util/index');
+
 const TOLERANCE = 0.00001;
 
 const q = x => Math.log(1000) / Math.log(x);
