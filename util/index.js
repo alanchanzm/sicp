@@ -14,20 +14,16 @@ const identity = x => x;
 
 const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
 
-class Cons {
-  constructor(x, y) {
-    this.car = x;
-    this.cdr = y;
-  }
-
-  get car() {
-    return this.car;
-  }
-
-  get cdr() {
-    return this.cdr;
-  }
+function cons(x, y) {
+  return function dispatch(m) {
+    if (m === 0) return x;
+    if (m === 1) return y;
+    return new Error(`Argument not 0 or 1 -- CONS ${m}`);
+  };
 }
+
+const car = () => 0;
+const cdr = () => 1;
 
 module.exports = {
   square,
@@ -39,5 +35,7 @@ module.exports = {
   inc,
   identity,
   gcd,
-  Cons,
+  cons,
+  car,
+  cdr,
 };
