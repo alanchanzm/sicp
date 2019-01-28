@@ -25,6 +25,12 @@ function cons(x, y) {
 const car = z => z(0);
 const cdr = z => z(1);
 
+function list(...items) {
+  if (items.length === 0) return null;
+  const [head, ...tail] = items;
+  return cons(head, list(...tail));
+}
+
 module.exports = {
   square,
   abs,
@@ -38,4 +44,5 @@ module.exports = {
   cons,
   car,
   cdr,
+  list,
 };
