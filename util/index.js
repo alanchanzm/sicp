@@ -26,12 +26,14 @@ function list(...items) {
   return cons(head, list(...tail));
 }
 
+const is_pair = x => Array.isArray(x) && x.length === 2;
 function value_of(cons_list) {
   return value_of_iter();
 
   function value_of_iter(conses = cons_list, result = []) {
+    const head = car(conses);
     const rest = cdr(conses);
-    const new_result = [...result, car(conses)];
+    const new_result = [...result, is_pair(head) ? value_of(head) : head];
     if (rest === null) return new_result;
     return value_of_iter(rest, new_result);
   }
@@ -58,4 +60,5 @@ module.exports = {
   list,
   map,
   value_of,
+  is_pair,
 };
