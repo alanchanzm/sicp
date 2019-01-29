@@ -17,21 +17,11 @@ const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
 const car = z => z(0);
 const cdr = z => z(1);
 function cons(x, y) {
-  function dispatch(m) {
+  return function dispatch(m) {
     if (m === 0) return x;
     if (m === 1) return y;
     return new Error(`Argument not 0 or 1 -- CONS ${m}`);
-  }
-  dispatch[Symbol.toPrimitive] = function toPrimitive() {
-    // let result = [];
-    // let self = this;
-    // while (car(self)) {
-    //   result = [...result, car(self)];
-    //   self = cdr(self);
-    // }
-    return car(this);
   };
-  return dispatch;
 }
 
 function list(...items) {
