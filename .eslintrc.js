@@ -12,5 +12,6 @@ module.exports = {
     'no-console': 'off',
     'arrow-parens': ['error', 'as-needed'],
     'no-mixed-operators': 'off',
+    'object-curly-newline': 'off',
   },
 };
